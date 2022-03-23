@@ -78,12 +78,17 @@ class ServerlessAppSyncSimulator {
       );
 
       this.simulators = [];
+      const customSubscriptionPath = this.options.customSubscriptionPath; // XXX TODO
       if (Array.isArray(this.serverless.service.custom.appSync)) {
         let port = this.options.port;
         let wsPort = this.options.wsPort;
         for (let appSyncConfig of this.serverless.service.custom.appSync) {
           this.simulators.push({
-            amplifySimulator: await this.startIndividualServer(port, wsPort),
+            amplifySimulator: await this.startIndividualServer(
+              port,
+              wsPort,
+              customSubscriptionPath,
+            ),
             name: appSyncConfig.name,
           });
           port += 10;
@@ -94,6 +99,7 @@ class ServerlessAppSyncSimulator {
           amplifySimulator: await this.startIndividualServer(
             this.options.port,
             this.options.wsPort,
+            customSubscriptionPath,
           ),
           name: this.serverless.service.custom.appSync.name,
         });
@@ -118,10 +124,11 @@ class ServerlessAppSyncSimulator {
     }
   }
 
-  async startIndividualServer(port, wsPort) {
+  async startIndividualServer(port, wsPort, customSubscriptionPath) {
     const simulator = new AmplifyAppSyncSimulator({
       port: port,
       wsPort: wsPort,
+      customSubscriptionPath: customSubscriptionPath,
     });
     await simulator.start();
 
