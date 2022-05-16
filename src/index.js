@@ -1,7 +1,7 @@
 import {
   AmplifyAppSyncSimulator,
   addDataLoader,
-} from 'amplify-appsync-simulator';
+} from 'amplify-appsync-simulator-pathable';
 import { inspect } from 'util';
 import { defaults, get, merge, reduce } from 'lodash';
 import NodeEvaluator from 'cfn-resolver-lib';
