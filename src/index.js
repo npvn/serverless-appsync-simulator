@@ -27,8 +27,6 @@ class ServerlessAppSyncSimulator {
     this.simulators = null;
 
     addDataLoader('HTTP', HttpDataLoader);
-    addDataLoader('AMAZON_ELASTICSEARCH', ElasticDataLoader);
-    addDataLoader('RELATIONAL_DATABASE', RelationalDataLoader);
 
     this.hooks = {
       'before:offline:start:init': this.startServers.bind(this),
@@ -78,7 +76,7 @@ class ServerlessAppSyncSimulator {
       );
 
       this.simulators = [];
-      const customSubscriptionPath = this.options.customSubscriptionPath; // XXX TODO
+      const customSubscriptionPath = this.options.customSubscriptionPath;
       if (Array.isArray(this.serverless.service.custom.appSync)) {
         let port = this.options.port;
         let wsPort = this.options.wsPort;

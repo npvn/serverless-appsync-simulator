@@ -1,6 +1,6 @@
 {
   "name": "serverless-appsync-simulator-pathable",
-  "version": "0.19.7-allow-preflight-options",
+  "version": "0.19.7-no-extra-data-loaders",
   "main": "lib/index.js",
   "author": "bboure",
   "license": "MIT",
