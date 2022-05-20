@@ -1900,10 +1900,10 @@ all-contributors-cli@^6.19.0:
     pify "^5.0.0"
     yargs "^15.0.1"
 
-amplify-appsync-simulator-pathable@2.3.12-allow-preflight-options:
-  version "2.3.12-allow-preflight-options"
-  resolved "https://registry.yarnpkg.com/amplify-appsync-simulator-pathable/-/amplify-appsync-simulator-pathable-2.3.12-allow-preflight-options.tgz#e8cf02e73f2209588b4104aece8ff764a8174ada"
-  integrity sha512-f/mhsmA0N+/wbKCgNoXySLPSIV/v/NYOVs1YzFsDx09M3WG37ODz/E7gjn2YstQ4g/kFLmvWxd67gvd9v8+gjw==
+amplify-appsync-simulator-pathable@2.3.12-add-default-api-key:
+  version "2.3.12-add-default-api-key"
+  resolved "https://registry.yarnpkg.com/amplify-appsync-simulator-pathable/-/amplify-appsync-simulator-pathable-2.3.12-add-default-api-key.tgz#4fff8d99775f833c0b61ddb1671ff02dba47c3a2"
+  integrity sha512-1u/jUGp9CFBfJCWoffsTXnIpPBj+mOAabOhA/i1/XxGE6d8CMn8Z/l2Xc9sGvZEMjhzvqDSEBCXmwglcH/HRuQ==
   dependencies:
     "@graphql-tools/schema" "^8.3.1"
     "@graphql-tools/utils" "^8.5.1"

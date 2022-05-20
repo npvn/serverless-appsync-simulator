@@ -1,6 +1,6 @@
 {
   "name": "serverless-appsync-simulator-pathable",
-  "version": "0.19.7-no-extra-data-loaders",
+  "version": "0.19.7-add-default-api-key",
   "main": "lib/index.js",
   "author": "bboure",
   "license": "MIT",
@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "@graphql-tools/merge": "^8.2.1",
-    "amplify-appsync-simulator-pathable": "2.3.12-allow-preflight-options",
+    "amplify-appsync-simulator-pathable": "2.3.12-add-default-api-key",
     "amplify-nodejs-function-runtime-provider": "^1.1.6",
     "aws-sdk": "^2.792.0",
     "axios": "^0.21.0",
